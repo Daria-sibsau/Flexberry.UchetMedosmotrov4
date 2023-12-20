@@ -1,0 +1,274 @@
+﻿{
+  "name": "IISUchetMedosmotrov4ИндНапрМедосм",
+  "modelName": "i-i-s-uchet-medosmotrov4-инд-напр-медосм",
+  "className": "ИндНапрМедосм",
+  "nameSpace": "IIS.UchetMedosmotrov4",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "дата",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "Now",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номерДок",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "медУчреждение",
+      "relatedTo": "i-i-s-uchet-medosmotrov4-мед-учреждение",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "организация",
+      "relatedTo": "i-i-s-uchet-medosmotrov4-организация",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "сотрудники",
+      "relatedTo": "i-i-s-uchet-medosmotrov4-сотрудники",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "вреднФактПроиз",
+      "relatedTo": "i-i-s-uchet-medosmotrov4-вредн-факт-произ",
+      "inverse": "индНапрМедосм"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ИндНапрМедосмE",
+      "modelName": "i-i-s-uchet-medosmotrov4-инд-напр-медосм",
+      "attrs": [
+        {
+          "name": "номерДок",
+          "caption": "Номер документа",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Наименование",
+          "lookupValueField": "наименование",
+          "relationName": "Организация",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Наименование",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "type": "standard",
+          "caption": "Организация",
+          "name": "организация",
+          "relatedTo": "i-i-s-uchet-medosmotrov4-организация",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Наименование",
+          "lookupValueField": "наименование",
+          "relationName": "МедУчреждение",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Наименование",
+              "hidden": false,
+              "index": 5
+            }
+          ],
+          "index": 4,
+          "type": "standard",
+          "caption": "Медицинское учреждение",
+          "name": "медУчреждение",
+          "relatedTo": "i-i-s-uchet-medosmotrov4-мед-учреждение",
+          "inverse": null
+        },
+        {
+          "lookupValue": "ФИО",
+          "lookupValueField": "фИО",
+          "relationName": "Сотрудники",
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "Сотрудники.Должности",
+              "belongsTo": [
+                {
+                  "lookupValue": null,
+                  "lookupValueField": null,
+                  "relationName": "Сотрудники.Должности.Подразделения",
+                  "belongsTo": [],
+                  "hidden": false,
+                  "attrs": [
+                    {
+                      "name": "наименование",
+                      "caption": "Подразделение",
+                      "hidden": false,
+                      "index": 11
+                    }
+                  ],
+                  "index": -1,
+                  "type": null,
+                  "caption": "",
+                  "name": "подразделения",
+                  "relatedTo": "i-i-s-uchet-medosmotrov4-подразделения",
+                  "inverse": null
+                }
+              ],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "наименование",
+                  "caption": "Должность",
+                  "hidden": false,
+                  "index": 10
+                }
+              ],
+              "index": -1,
+              "type": null,
+              "caption": "",
+              "name": "должности",
+              "relatedTo": "i-i-s-uchet-medosmotrov4-должности",
+              "inverse": null
+            }
+          ],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "iDСотрудника",
+              "caption": "ID сотрудника",
+              "hidden": false,
+              "index": 7
+            },
+            {
+              "name": "фИО",
+              "caption": "ФИО",
+              "hidden": false,
+              "index": 8
+            },
+            {
+              "name": "датаРождения",
+              "caption": "Дата рождения",
+              "hidden": false,
+              "index": 9
+            }
+          ],
+          "index": 6,
+          "type": "standard",
+          "caption": "Сотрудники",
+          "name": "сотрудники",
+          "relatedTo": "i-i-s-uchet-medosmotrov4-сотрудники",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "ВреднФактПроизE",
+          "caption": "Вредные факторы производства",
+          "name": "вреднФактПроиз",
+          "relatedTo": "i-i-s-uchet-medosmotrov4-вредн-факт-произ",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ИндНапрМедосмL",
+      "modelName": "i-i-s-uchet-medosmotrov4-инд-напр-медосм",
+      "attrs": [
+        {
+          "name": "номерДок",
+          "caption": "Номер документа",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Сотрудники",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИО",
+              "caption": "ФИО",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "ФИО",
+          "name": "сотрудники",
+          "relatedTo": "i-i-s-uchet-medosmotrov4-сотрудники",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "МедУчреждение",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Медицинское учреждение",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Медицинское учреждение",
+          "name": "медУчреждение",
+          "relatedTo": "i-i-s-uchet-medosmotrov4-мед-учреждение",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

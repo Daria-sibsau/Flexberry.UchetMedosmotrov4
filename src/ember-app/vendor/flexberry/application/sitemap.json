@@ -1,0 +1,78 @@
+﻿{
+  "applicationCaption": "Uchet medosmotrov4",
+  "applicationTitle": "Uchet medosmotrov4",
+  "items": [
+    {
+      "link": null,
+      "menuName": "uchet-medosmotrov4",
+      "caption": "UchetMedosmotrov4",
+      "title": "UchetMedosmotrov4",
+      "children": [
+        {
+          "link": "i-i-s-uchet-medosmotrov4-класс-вред-факт-l",
+          "menuName": null,
+          "caption": "Класс вред факт",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-uchet-medosmotrov4-список-на-медосм-l",
+          "menuName": null,
+          "caption": "Список на медосм",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-uchet-medosmotrov4-сотрудники-l",
+          "menuName": null,
+          "caption": "Сотрудники",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-uchet-medosmotrov4-инд-напр-медосм-l",
+          "menuName": null,
+          "caption": "Инд напр медосм",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-uchet-medosmotrov4-мед-учреждение-l",
+          "menuName": null,
+          "caption": "Мед учреждение",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-uchet-medosmotrov4-подразделения-l",
+          "menuName": null,
+          "caption": "Подразделения",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-uchet-medosmotrov4-должности-l",
+          "menuName": null,
+          "caption": "Должности",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-uchet-medosmotrov4-приказ-м-з-р-l",
+          "menuName": null,
+          "caption": "Приказ МЗР",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-uchet-medosmotrov4-организация-l",
+          "menuName": null,
+          "caption": "Организация",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}
