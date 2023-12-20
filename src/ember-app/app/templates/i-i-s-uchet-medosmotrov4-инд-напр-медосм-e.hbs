@@ -64,16 +64,6 @@
     {{flexberry-validationmessage error=(v-get validationModel "организация" "message")}}
   </div>
   <div class="field">
-    {{flexberry-field
-      readonly=true
-      value=model.организация.наименование
-      class=(if (v-get validationModel.организация "наименование" "isInvalid") "error")
-      label=(t "forms.i-i-s-uchet-medosmotrov4-инд-напр-медосм-e.организация.наименование-caption")
-      data-test-i-i-s-uchet-medosmotrov4-инд-напр-медосм-e-организация-наименование=true
-    }}
-    {{flexberry-validationmessage error=(v-get validationModel.организация "наименование" "message")}}
-  </div>
-  <div class="field">
     <label>{{t "forms.i-i-s-uchet-medosmotrov4-инд-напр-медосм-e.медУчреждение-caption"}}</label>
     {{flexberry-lookup
       choose="showLookupDialog"
@@ -90,16 +80,6 @@
       data-test-i-i-s-uchet-medosmotrov4-инд-напр-медосм-e-медУчреждение=true
     }}
     {{flexberry-validationmessage error=(v-get validationModel "медУчреждение" "message")}}
-  </div>
-  <div class="field">
-    {{flexberry-field
-      readonly=true
-      value=model.медУчреждение.наименование
-      class=(if (v-get validationModel.медУчреждение "наименование" "isInvalid") "error")
-      label=(t "forms.i-i-s-uchet-medosmotrov4-инд-напр-медосм-e.медУчреждение.наименование-caption")
-      data-test-i-i-s-uchet-medosmotrov4-инд-напр-медосм-e-медУчреждение-наименование=true
-    }}
-    {{flexberry-validationmessage error=(v-get validationModel.медУчреждение "наименование" "message")}}
   </div>
   <div class="field">
     <label>{{t "forms.i-i-s-uchet-medosmotrov4-инд-напр-медосм-e.сотрудники-caption"}}</label>

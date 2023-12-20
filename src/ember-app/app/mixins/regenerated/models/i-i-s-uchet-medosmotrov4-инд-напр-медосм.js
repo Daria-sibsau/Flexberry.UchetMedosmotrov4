@@ -63,10 +63,10 @@ export let defineProjections = function (modelClass) {
     номерДок: attr('Номер документа', { index: 0 }),
     дата: attr('Дата', { index: 1 }),
     организация: belongsTo('i-i-s-uchet-medosmotrov4-организация', 'Организация', {
-      наименование: attr('Наименование', { index: 3 })
+      наименование: attr('Наименование', { index: 3, hidden: true })
     }, { index: 2, displayMemberPath: 'наименование' }),
     медУчреждение: belongsTo('i-i-s-uchet-medosmotrov4-мед-учреждение', 'Медицинское учреждение', {
-      наименование: attr('Наименование', { index: 5 })
+      наименование: attr('Наименование', { index: 5, hidden: true })
     }, { index: 4, displayMemberPath: 'наименование' }),
     сотрудники: belongsTo('i-i-s-uchet-medosmotrov4-сотрудники', 'Сотрудники', {
       iDСотрудника: attr('ID сотрудника', { index: 7 }),

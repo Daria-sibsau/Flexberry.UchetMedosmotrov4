@@ -41,7 +41,9 @@ namespace IIS.UchetMedosmotrov4
             "Сотрудники.ФИО as \'ФИО\'",
             "Сотрудники.ДатаРождения as \'Дата рождения\'",
             "Сотрудники.Должности.Наименование as \'Должность\'",
-            "Сотрудники.Должности.Подразделения.Наименование as \'Подразделение\'"})]
+            "Сотрудники.Должности.Подразделения.Наименование as \'Подразделение\'"}, Hidden=new string[] {
+            "Организация.Наименование",
+            "МедУчреждение.Наименование"})]
     [AssociatedDetailViewAttribute("ИндНапрМедосмE", "ВреднФактПроиз", "ВреднФактПроизE", true, "", "Вредные факторы производства", true, new string[] {
             ""})]
     [MasterViewDefineAttribute("ИндНапрМедосмE", "Организация", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Наименование")]
@@ -278,7 +280,6 @@ namespace IIS.UchetMedosmotrov4
         public virtual void Печать()
         {
             // *** Start programmer edit section *** (ИндНапрМедосм.Печать method implementation)
-
             return;
             // *** End programmer edit section *** (ИндНапрМедосм.Печать method implementation)
         }
@@ -290,7 +291,6 @@ namespace IIS.UchetMedosmotrov4
         public virtual void Удалить()
         {
             // *** Start programmer edit section *** (ИндНапрМедосм.Удалить method implementation)
-
             return;
             // *** End programmer edit section *** (ИндНапрМедосм.Удалить method implementation)
         }
